@@ -1,0 +1,5 @@
+23:07:36.983 [main] TRACE log4j2Examples.diffLevelsForDiffPacks.PR2ErrorLogging - This is trace message
+23:07:36.999 [main] DEBUG log4j2Examples.diffLevelsForDiffPacks.PR2ErrorLogging - This is debug message
+23:07:36.999 [main] INFO  log4j2Examples.diffLevelsForDiffPacks.PR2ErrorLogging - This is info message
+23:07:36.999 [main] WARN  log4j2Examples.diffLevelsForDiffPacks.PR2ErrorLogging - This is warn message
+23:07:36.999 [main] ERROR log4j2Examples.diffLevelsForDiffPacks.PR2ErrorLogging - This is error message
