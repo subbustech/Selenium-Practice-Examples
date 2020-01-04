@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr10WritingDataIntoOneCell {
+public class Pr11WriteDataIntoOneCellCreateNewExcel {
 
 	public static void main(String[] args) throws IOException {
 				//Create a blank workbook

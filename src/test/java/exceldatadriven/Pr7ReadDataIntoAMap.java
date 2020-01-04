@@ -14,7 +14,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr7DataIntoAMap {
+public class Pr7ReadDataIntoAMap {
 
 	public static void main(String[] args) throws IOException {
 

@@ -2,7 +2,6 @@ package exceldatadriven;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -10,7 +9,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr4EntireRow {
+public class Pr2ReadSingleCellValueNumToStringFirstWay {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -25,17 +24,18 @@ public class Pr4EntireRow {
 		//Get a row number
 		Row row = sheet.getRow(1);
 		
-		Iterator<Cell> it = row.iterator();
-		while(it.hasNext())
-		{
-			//Get the Cell
-			Cell cell = it.next();
-			DataFormatter df = new DataFormatter();
-			String cellvalue = df.formatCellValue(cell);
-			System.out.println(cellvalue);
-		}
+		//Get a cell number
+		Cell cell = row.getCell(3);
+		
+		//Get that cell value
+		DataFormatter df = new DataFormatter();
+		String cellvalue = df.formatCellValue(cell);
+		
+		System.out.println(cellvalue);
 		
 		workbook.close();
+
+
 	}
 
 }

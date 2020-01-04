@@ -4,13 +4,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr3SingleCellValueNumToStringSecondWay {
+public class Pr1ReadSingleCellValueString {
 
 	public static void main(String[] args) throws IOException {
 		
@@ -26,15 +24,10 @@ public class Pr3SingleCellValueNumToStringSecondWay {
 		Row row = sheet.getRow(1);
 		
 		//Get a cell number
-		Cell cell = row.getCell(3);
+		Cell cell = row.getCell(1);
 		
 		//Get that cell value
-		if(cell.getCellType() == CellType.STRING) {
-			System.out.println(cell.getStringCellValue());
-		}
-		else {
-			System.out.println(NumberToTextConverter.toText(cell.getNumericCellValue()));
-		}
+		System.out.println(cell.getStringCellValue());
 		
 		workbook.close();
 

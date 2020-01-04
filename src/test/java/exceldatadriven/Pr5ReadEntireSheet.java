@@ -10,7 +10,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr6EntireSheetWithOutColumnHeadings {
+public class Pr5ReadEntireSheet {
 
 	public static void main(String[] args) throws IOException {
 
@@ -24,23 +24,21 @@ public class Pr6EntireSheetWithOutColumnHeadings {
 
 		Iterator<Row> itrow = sheet.iterator();
 		while(itrow.hasNext()) {
-
+			
 			//Get a row number
 			Row row = itrow.next();
-			
-			//Make sure the row number is not zero as it is the column names row
-			if(row.getRowNum() != 0) {
-				Iterator<Cell> it = row.iterator();
-				while(it.hasNext())
-				{
-					//Get the Cell
-					Cell cell = it.next();
-					DataFormatter df = new DataFormatter();
-					String cellvalue = df.formatCellValue(cell);
-					System.out.println(cellvalue);
-				}
+
+			Iterator<Cell> it = row.iterator();
+			while(it.hasNext())
+			{
+				//Get the Cell
+				Cell cell = it.next();
+				DataFormatter df = new DataFormatter();
+				String cellvalue = df.formatCellValue(cell);
+				System.out.println(cellvalue);
 			}
 		}
 		workbook.close();
 	}
+
 }

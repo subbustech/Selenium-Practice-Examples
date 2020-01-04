@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr11WritingMultiDataIntoCells {
+public class Pr12WriteMultiDataIntoCellsCreateNewExcel {
 
 	public static void main(String[] args) throws IOException {
 		//Create a blank workbook
