@@ -23,13 +23,13 @@ public class Pr8UtilityCalssReturnsMap {
 
 		List<String> columnnames = new ArrayList<String>();
 
-		FileInputStream fis = new FileInputStream("data/testdata.xlsx");
+		FileInputStream fis = new FileInputStream(path);
 
 		//Create xssfworkbook object
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
 		//Get the sheet you want
-		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		XSSFSheet sheet = workbook.getSheet(sheetName);
 
 		Iterator<Row> itrow = sheet.iterator();
 

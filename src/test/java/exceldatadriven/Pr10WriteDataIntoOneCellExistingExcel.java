@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Pr10WriteDateIntoOneCellExistingExcel {
+public class Pr10WriteDataIntoOneCellExistingExcel {
 	public static void main(String[] args) {
 		FileInputStream fis = null;
 
