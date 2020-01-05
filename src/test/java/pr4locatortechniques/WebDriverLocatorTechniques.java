@@ -56,20 +56,20 @@ public class WebDriverLocatorTechniques {
 		driver.manage().window().maximize();		
 		driver.get("file:///"+System.getProperty("user.dir")+"\\practicesite\\index\\index.html");
 		
-		//locating by tagname
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@color='red']")).sendKeys("subbu");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@color='red']")).clear();
-		Thread.sleep(1000);
-		
-		//locating by xpath
+		//locating by tag name
 		Thread.sleep(1000);
 		driver.findElements(By.tagName("input")).get(2).sendKeys("subbu");
 		Thread.sleep(1000);
 		driver.findElements(By.tagName("input")).get(2).clear();
 		Thread.sleep(1000);
-		
+
+		//locating by xpath
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@color='red']")).sendKeys("subbu");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@color='red']")).clear();
+		Thread.sleep(1000);
+				
 		//locating by css selector
 		Thread.sleep(1000);
 		driver.findElement(By.cssSelector("input[color='red']")).sendKeys("subbu");
