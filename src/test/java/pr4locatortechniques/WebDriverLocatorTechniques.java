@@ -14,8 +14,6 @@ public class WebDriverLocatorTechniques {
 		
 		driver.manage().window().maximize();
 		
-		System.out.println(System.getProperty("user.dir"));
-		
 		driver.get("file:///"+System.getProperty("user.dir")+"\\practicesite\\index\\index.html");
 		
 		//locating by id
@@ -23,8 +21,54 @@ public class WebDriverLocatorTechniques {
 		driver.findElement(By.id("firstname")).sendKeys("subbu");
 		Thread.sleep(1000);
 		driver.findElement(By.id("firstname")).clear();
+		
+		//locating by name
+		Thread.sleep(1000);
+		driver.findElement(By.name("firstname")).sendKeys("subbu");
+		Thread.sleep(1000);
+		driver.findElement(By.name("firstname")).clear();
 		Thread.sleep(1000);
 		
+		//locating by class name
+		Thread.sleep(1000);
+		driver.findElement(By.className("beautifultextbox")).sendKeys("subbu");
+		Thread.sleep(1000);
+		driver.findElement(By.className("beautifultextbox")).clear();
+		Thread.sleep(1000);
+		
+		//locating by link text
+		Thread.sleep(1000);
+		driver.findElement(By.linkText("google the top search engine")).click();
+		Thread.sleep(1000);
+		driver.close();
+		
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();		
+		driver.get("file:///"+System.getProperty("user.dir")+"\\practicesite\\index\\index.html");
+		
+		//locating by partial link text
+		Thread.sleep(1000);
+		driver.findElement(By.partialLinkText("top search engine")).click();
+		Thread.sleep(1000);
+		driver.close();
+		
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();		
+		driver.get("file:///"+System.getProperty("user.dir")+"\\practicesite\\index\\index.html");
+		
+		//locating by xpath
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@color='red']")).sendKeys("subbu");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@color='red']")).clear();
+		Thread.sleep(1000);
+		
+		//locating by css selector
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[color='red']")).sendKeys("subbu");
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[color='red']")).clear();
+		Thread.sleep(1000);
 		driver.close();
 	}
 
