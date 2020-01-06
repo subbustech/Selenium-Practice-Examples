@@ -54,7 +54,6 @@ public class Pr16DifferentExcelMethods {
 		//cell.getStringCellValue(String); //Get the text value from the cell
 		//cell.setCellValue(Date); //Sets a date value to the cell
 		//cell.setCellValue(String);//Sets a string value to the cell
-		//Get that cell value
 
 		System.out.println(cell.getStringCellValue());
 		

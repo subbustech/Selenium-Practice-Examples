@@ -66,10 +66,11 @@ public class Pr7ReadDataIntoAMap {
 					
 					singlerowdata.put(columnnames.get(cell.getColumnIndex()), cellvalue);
 				}
+				System.out.println(singlerowdata);
 				allrowsdata.put(row.getRowNum(), singlerowdata);
 			}
 		}
-		
+		System.out.println(columnnames);
 		System.out.println(allrowsdata);
 		workbook.close();
 	}
