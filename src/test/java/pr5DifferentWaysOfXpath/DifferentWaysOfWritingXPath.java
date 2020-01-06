@@ -58,6 +58,16 @@ public class DifferentWaysOfWritingXPath {
 		System.out.println(precedingsibbling1);
 		Thread.sleep(1000);
 		
+		//Locating by xpath using parent
+		String parentdes = driver.findElement(By.xpath("//div[@id='child4']//parent::div")).getText();
+		System.out.println(parentdes);
+		Thread.sleep(1000);
+		
+		//Locating by xpath using ancestor
+		String ancestordes = driver.findElement(By.xpath("//div[@id='child4']//ancestor::div")).getText();
+		System.out.println(ancestordes);
+		Thread.sleep(1000);
+		
 		driver.close();
 	}
 
